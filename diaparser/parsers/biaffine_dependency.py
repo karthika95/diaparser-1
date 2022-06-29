@@ -44,7 +44,7 @@ class BiaffineDependencyParser(Parser):
                                     for s, i in self.WORD.vocab.stoi.items()
                                     if ispunct(s)]).to(self.args.device)
 
-    def train(self, train, dev, test, buckets=32, batch_size=5000,
+    def train(self, train, dev, test, buckets=32, batch_size=500,
               punct=False, tree=False, proj=False, verbose=True, **kwargs):
         r"""
         Args:
