@@ -122,7 +122,9 @@ class SpanMetric(Metric):
 
     @property
     def ucm(self):
-        print(self.n_ucm / (self.n + self.eps))
+        import logging
+        test=self.n_ucm / (self.n + self.eps)
+        logging.info(test)
         return self.n_ucm / (self.n + self.eps)
 
     @property
