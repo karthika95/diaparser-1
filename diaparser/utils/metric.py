@@ -70,6 +70,7 @@ class AttachmentMetric(Metric):
 
     @property
     def uas(self):
+        print(self.correct_arcs / (self.total + self.eps))
         return self.correct_arcs / (self.total + self.eps)
 
     @property
@@ -121,6 +122,7 @@ class SpanMetric(Metric):
 
     @property
     def ucm(self):
+        print(self.n_ucm / (self.n + self.eps))
         return self.n_ucm / (self.n + self.eps)
 
     @property
