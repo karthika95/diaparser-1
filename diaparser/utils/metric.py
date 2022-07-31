@@ -70,7 +70,9 @@ class AttachmentMetric(Metric):
 
     @property
     def uas(self):
-        print(self.correct_arcs / (self.total + self.eps))
+        import logging
+        test=self.correct_arcs / (self.total + self.eps)
+        logging.info(test) #
         return self.correct_arcs / (self.total + self.eps)
 
     @property
