@@ -70,9 +70,6 @@ class AttachmentMetric(Metric):
 
     @property
     def uas(self):
-        import logging
-        test=self.correct_arcs / (self.total + self.eps)
-        logging.info(test) #
         return self.correct_arcs / (self.total + self.eps)
 
     @property
@@ -124,9 +121,6 @@ class SpanMetric(Metric):
 
     @property
     def ucm(self):
-        import logging
-        test=self.n_ucm / (self.n + self.eps)
-        logging.info(test)
         return self.n_ucm / (self.n + self.eps)
 
     @property
